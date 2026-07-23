@@ -3,13 +3,14 @@ import pickle
 import faiss
 from groq import Groq
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
+from embedding import get_model
+
 
 load_dotenv()
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+
 
 
 def ask_question(question):
@@ -20,8 +21,13 @@ def ask_question(question):
     # Load latest chunks
     with open("vector_db/chunks.pkl", "rb") as f:
         chunks = pickle.load(f)
+    print(f"Loaded {len(chunks)} chunks")
+    print("First chunk:")
+    print(chunks[0][:200])
 
     # Convert question to embedding
+    model = get_model()
+
     query_embedding = model.encode([question])
 
     # Search FAISS
