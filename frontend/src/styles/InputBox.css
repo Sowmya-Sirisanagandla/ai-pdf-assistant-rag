@@ -1,0 +1,48 @@
+.input-box{
+
+    display:flex;
+
+    gap:12px;
+}
+
+.input-box input{
+
+    flex:1;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+.input-box input:focus{
+
+    border-color:#2f5fe3;
+}
+
+.input-box button{
+
+    background:#2f5fe3;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px 30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.input-box button:hover{
+
+    background:#1d4ed8;
+}

@@ -1,0 +1,34 @@
+.upload-box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.upload-box input{
+    font-size:16px;
+}
+
+.upload-box button{
+
+    background:#2f5fe3;
+    color:white;
+
+    border:none;
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.upload-box button:hover{
+    background:#1d4ed8;
+}

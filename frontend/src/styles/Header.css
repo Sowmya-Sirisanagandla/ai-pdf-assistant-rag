@@ -1,0 +1,15 @@
+.header{
+    text-align:center;
+    padding:10px;
+}
+
+.header h1{
+    color:#2f5fe3;
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#666;
+    font-size:1.2rem;
+}
